@@ -12,6 +12,7 @@ h1{
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  font-weight: bold;
 
   //if menu item also has class large
   &.large {
@@ -43,7 +44,10 @@ h1{
     }
 
     & .content{
-      opacity: 0.9;
+      transform: scale(1.05);
+      opacity: 1;
+      border-color: #f3f3f3;
+      transition: 1s
     }
   }
   //any class of content that sits inbetween any class of menu item will get these styles
