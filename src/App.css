@@ -1,4 +1,9 @@
 body {
   font-family: 'Muli', sans-serif;
-  padding: 20px 60px;
+  padding: 20px 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
