@@ -3,7 +3,9 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  background-color:rgb(67, 67, 67);
+  opacity: 0.9;
+  margin-bottom: 25px;
 
   .logo-container{
     height: 75px;
@@ -11,15 +13,18 @@
     padding: 20px 25px;
   }
 
+  
+
   .options{
     width: 50%;
     height: 100%;
     display: flex;
     align-content: center;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 20px 15px;
 
     .option{
+      color: #f3f3f3;
       padding: 10px 15px;
     }
   }
