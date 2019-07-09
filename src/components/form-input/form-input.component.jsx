@@ -6,7 +6,7 @@ const FormInput = ({ handleChange, label, ...otherProps }) => {
   return (
 
     <div className="group">
-      <input className='form-input' onChange={handleChange} />
+      <input className='form-input' onChange={handleChange} {...otherProps} />
       {
         label ?
           (
@@ -24,3 +24,4 @@ const FormInput = ({ handleChange, label, ...otherProps }) => {
 }
 
 export default FormInput
+
