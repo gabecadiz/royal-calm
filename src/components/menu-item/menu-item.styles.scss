@@ -9,10 +9,12 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
   font-weight: bold;
+  -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
+  -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
+  box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
 
   //if menu item also has class large
   &.large {
@@ -44,10 +46,17 @@ h1{
     }
 
     & .content{
-      transform: scale(1.05);
       opacity: 1;
-      border-color: #f3f3f3;
-      transition: 1s
+      border: 1px solid #f3f3f3;
+      transition: 0.2s;
+
+      & .title {
+        color: #FAC94D;
+      }
+
+      & .subtitle {
+       color: #FAC94D;
+      }
     }
   }
   //any class of content that sits inbetween any class of menu item will get these styles
@@ -59,9 +68,12 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    // border: 1px solid black;
+    -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
     background-color: rgb(67, 67, 67);
-    opacity: 0.9;
+    opacity: 0.95;
     position: absolute;
     }
 
