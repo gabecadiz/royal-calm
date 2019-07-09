@@ -8,19 +8,17 @@ import Header from './components/header/header.component'
 
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
+import { connect } from 'react-redux';
+import { setCurrentUser } from './redux/user/user.action'
 
 import './App.css';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      currentUser: null
-    }
-  }
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props
+
     //open subscription - default persistance of user sessions
     //connection is always open, must close when unmounts
     //async, createUserProfileDocument gets run whenever we get an auth object for firestore
@@ -30,15 +28,13 @@ class App extends React.Component {
 
         userRef.onSnapshot(snapShot => {
           //set state with user id and any data representing all properties of snapshot
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
           });
         });
       } else {
-        this.setState({ currentUser: userAuth })
+        setCurrentUser(userAuth);
       }
 
     })
@@ -53,7 +49,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
@@ -64,4 +60,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+export default connect(null, mapDispatchToProps)(App);
