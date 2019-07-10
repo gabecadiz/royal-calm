@@ -12,7 +12,7 @@ import ShoppingCart from '../shopping-cart/shopping-cart.component'
 
 import './header.styles.scss';
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
   return (
     <div className='header'>
       <Link className='logo-container' to='/'>
@@ -34,13 +34,14 @@ const Header = ({ currentUser }) => {
         }
         <CartIcon />
       </div>
-      <ShoppingCart />
+      {hidden ? null : <ShoppingCart />}
     </div>
   )
 }
-
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+//destructure currentUser from user and hidden from cart
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser: currentUser,
+  hidden: hidden
 })
 
 export default connect(mapStateToProps)(Header)
