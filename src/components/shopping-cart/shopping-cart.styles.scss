@@ -18,7 +18,18 @@
     overflow: scroll;
   }
 
+  .empty-message{
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+  }
+
+  .empty{
+    color: red;
+  }
+
   .price-info{
+    padding: 1rem 0;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
