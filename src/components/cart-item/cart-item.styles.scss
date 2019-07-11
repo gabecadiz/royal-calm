@@ -6,6 +6,7 @@
 
   .image{
     width: 40%;
+    height: auto;
   }
 
   .item-details{
@@ -19,4 +20,43 @@
   .name{
     font-size: 16px;
   }
+
+  .cart-remove-button{
+    color: red;
+    align-self: center;
+    justify-self: center;
+    padding-right: 15px;
+
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.2);
+
+    }
+  }
+
+  .quantity-modifiers {
+    display: flex;
+    justify-content: space-evenly;    
+  }
+
+  .cart-item-inc {
+    font-weight: bolder;
+    font-size:1.2 rem;
+
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+  }
+
+  .cart-item-dec {
+    font-weight: bolder;
+    font-size:1.2 rem;
+
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.5);
+    }
+  }
+
 }
