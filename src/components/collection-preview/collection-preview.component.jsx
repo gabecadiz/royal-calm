@@ -4,14 +4,19 @@ import CollectionItem from '../collection-item/collection-item.component'
 
 import {
   CollectionPreviewContainer,
+  CollectionTitleContainer,
   CollectionTitle,
+  CollectionLink,
   CollectionPreviewFilteredContainer
 } from './collection-preview.styles'
 
-const CollectionPreview = ({ title, items }) => {
+const CollectionPreview = ({ title, items, routeName }) => {
   return (
     <CollectionPreviewContainer>
-      <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
+      <CollectionTitleContainer>
+        <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
+        <CollectionLink to={`/shop/${routeName}`}> View Full Collection </CollectionLink>
+      </CollectionTitleContainer>
       <CollectionPreviewFilteredContainer>
         {
           items
