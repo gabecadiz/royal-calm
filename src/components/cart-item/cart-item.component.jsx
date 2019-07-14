@@ -3,28 +3,36 @@ import { connect } from 'react-redux';
 
 import { clearItem, removeItem, addItem } from '../../redux/cart/cart.actions'
 
-import './cart-item.styles.scss';
+import {
+  CartItemContainer,
+  CartItemImage,
+  ItemDetailsContainer,
+  NameContainer,
+  CartItemQuantityContainer,
+  CartItemDecrease,
+  CartItemQuantity,
+  CartItemIncrease,
+  CartRemoveButton
+} from './cart-item.styles'
 
 const CartItem = ({ item, clearItem, removeItem, addItem }) => {
   const { imageUrl, price, name, quantity } = item;
   return (
-    <div className="cart-item">
-      <img className='image' src={imageUrl} alt="item" />
-      <div className='item-details'>
-        <span className='name'>{name}</span>
-        <span className='price'>{quantity} x ${price} </span>
-        <div className='quantity'>
-          <div className='quantity-modifiers'>
-            <div className='cart-item-dec' onClick={() => { removeItem(item) }} > - </div>
-            <span className='quantity-text'> Quantity </span>
-            <div className='cart-item-inc' onClick={() => { addItem(item) }}> + </div>
-          </div>
-        </div>
-      </div>
-      <div className='cart-remove-button' onClick={() => clearItem(item)}>
+    <CartItemContainer>
+      <CartItemImage src={imageUrl} alt="item" />
+      <ItemDetailsContainer>
+        <NameContainer className='name'>{name}</NameContainer>
+        <span>{quantity} x ${price} </span>
+        <CartItemQuantityContainer>
+          <CartItemDecrease onClick={() => { removeItem(item) }} > - </CartItemDecrease>
+          <CartItemQuantity> Quantity </CartItemQuantity>
+          <CartItemIncrease onClick={() => { addItem(item) }}> + </CartItemIncrease>
+        </CartItemQuantityContainer>
+      </ItemDetailsContainer>
+      <CartRemoveButton className='cart-remove-button' onClick={() => clearItem(item)}>
         &#10006;
-      </div>
-    </div>
+      </CartRemoveButton>
+    </CartItemContainer>
   )
 }
 

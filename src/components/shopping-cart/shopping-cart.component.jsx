@@ -13,28 +13,33 @@ import { createStructuredSelector } from 'reselect';
 import { selectCartItems, selectCartItemsPriceTotal } from '../../redux/cart/cart.selectors'
 
 
-import './shopping-cart.styles.scss';
+import {
+  ShoppingCartContainer,
+  CartItemsContainer,
+  MessageContainer,
+  TotalPriceContainer
+} from './shopping-cart.styles'
 
 const ShoppingCart = ({ cartItems, totalPrice, history, toggleCart }) => {
   return (
-    <div className="shopping-cart">
-      <div className="cart-items">
+    <ShoppingCartContainer>
+      <CartItemsContainer>
         {cartItems.length ?
           cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)
           :
-          <span className="empty-message">Your Cart Is <span className="empty">Empty</span></span>
+          <MessageContainer>Your Cart Is <span className="empty">Empty</span></MessageContainer>
         }
-      </div>
-      <div className='total-container'>
-        <span className="price-info">
-          {totalPrice ? `Your cart total is $${totalPrice}` : null}
-        </span>
-      </div>
+      </CartItemsContainer>
+      <TotalPriceContainer>
+        <span>{totalPrice ? `Your cart total is $${totalPrice}` : null}</span>
+      </TotalPriceContainer>
       <CustomButton onClick={() => {
         toggleCart();
         history.push('/checkout');
-      }}>CHECKOUT</CustomButton>
-    </div>
+      }}>
+        <span>CHECKOUT</span>
+      </CustomButton>
+    </ShoppingCartContainer>
   )
 }
 

@@ -3,31 +3,45 @@ import { connect } from 'react-redux';
 
 import { clearItem, removeItem, addItem } from '../../redux/cart/cart.actions'
 
-import './checkout-item.styles.scss';
+import {
+  CheckoutItemContainer,
+  CheckoutItemImageContainer,
+  CheckoutItemImage,
+  NameContainer,
+  QuantityContainer,
+  QuantityArrow,
+  PriceContainer,
+  CheckoutRemoveButton
+} from './checkout-item.styles'
+
 
 const CheckoutItem = ({ cartItem, clearItem, removeItem, addItem }) => {
   const { name, imageUrl, quantity, price } = cartItem;
 
   return (
-    <div className='checkout-item'>
-      <div className='checkout-item-image-container'>
-        <img className='checkout-item-image' alt='checkout-item' src={imageUrl}></img>
-      </div>
-      <div className='name'>
-        {name}
-      </div>
-      <div className='quantity'>
-        <div className='arrow' onClick={() => { removeItem(cartItem) }} >&#10094; </div>
-        <span className='value'>{quantity}</span>
-        <div className='arrow' onClick={() => { addItem(cartItem) }}>&#10095; </div>
-      </div>
-      <div className='price'>
-        {price}
-      </div>
-      <div className='remove-button' onClick={() => clearItem(cartItem)}>
+    <CheckoutItemContainer>
+      <CheckoutItemImageContainer >
+        <CheckoutItemImage alt='checkout-item' src={imageUrl} />
+      </CheckoutItemImageContainer>
+      <NameContainer>
+        <span>{name}</span>
+      </NameContainer>
+      <QuantityContainer>
+        <QuantityArrow onClick={() => { removeItem(cartItem) }} >
+          &#10094;
+        </QuantityArrow>
+        <span>{quantity}</span>
+        <QuantityArrow className='arrow' onClick={() => { addItem(cartItem) }}>
+          &#10095;
+        </QuantityArrow>
+      </QuantityContainer>
+      <PriceContainer>
+        <span>${price}</span>
+      </PriceContainer>
+      <CheckoutRemoveButton onClick={() => clearItem(cartItem)}>
         &#10006;
-      </div>
-    </div>
+      </CheckoutRemoveButton>
+    </CheckoutItemContainer>
   )
 }
 

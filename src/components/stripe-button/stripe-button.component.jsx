@@ -15,7 +15,7 @@ const StripeCheckoutButton = ({ price }) => {
 
   return (
     <StripeCheckout
-      label='Pay Now'
+      label='Pay Now With Stripe'
       name='Royal Calm Clothing Ltd.'
       billingAddress
       shippingAddress
