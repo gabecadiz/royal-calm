@@ -3,6 +3,7 @@
   display:flex;
   height: 100px;
   margin-bottom: 15px;
+  font-size: 1.2rem;
 
   .image{
     width: 40%;
@@ -39,19 +40,21 @@
     justify-content: space-evenly;    
   }
 
+  .quantity-text{
+    font-size: 1rem;
+  }
+
   .cart-item-inc {
-    font-weight: bolder;
-    font-size:1.2 rem;
+    font-weight: bold;
 
     &:hover{
       cursor: pointer;
-      transform: scale(1.5);
+      transform: scale(1.5) translateY(-2px);
     }
   }
 
   .cart-item-dec {
-    font-weight: bolder;
-    font-size:1.2 rem;
+    font-weight: bold;
 
     &:hover{
       cursor: pointer;

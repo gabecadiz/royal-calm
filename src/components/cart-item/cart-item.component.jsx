@@ -16,7 +16,7 @@ const CartItem = ({ item, clearItem, removeItem, addItem }) => {
         <div className='quantity'>
           <div className='quantity-modifiers'>
             <div className='cart-item-dec' onClick={() => { removeItem(item) }} > - </div>
-            <span> Quantity </span>
+            <span className='quantity-text'> Quantity </span>
             <div className='cart-item-inc' onClick={() => { addItem(item) }}> + </div>
           </div>
         </div>

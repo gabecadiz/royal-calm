@@ -6,8 +6,6 @@
   justify-content: space-between;
   border: 1px solid black;
 
-
-
   .checkout-header{
     width: 100%;
     display: flex;
@@ -40,8 +38,27 @@
     align-self: flex-end;
     justify-self:end;
     padding: 1rem;
+    margin: 1rem 0 0.5rem 0;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bolder; 
   }
+
+  .stripe-checkout-button-container{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+
+    .StripeCheckout{
+      margin: 1rem auto;
+    }
+  }
+
+  .test-warning {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: red;
+  }
+
 }
