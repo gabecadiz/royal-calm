@@ -37,6 +37,9 @@ const Header = ({ currentUser, hidden }) => {
             :
             <OptionLink to='/signin'>SIGN IN </OptionLink>
         }
+        <OptionLink to='/checkout'>
+          CHECKOUT
+        </OptionLink>
         <CartIcon />
       </OptionsContainer>
       {hidden ? null : <ShoppingCart />}

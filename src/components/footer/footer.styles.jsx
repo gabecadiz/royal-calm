@@ -1,6 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
+const FooterInfoContainerStyles = css`
+  padding: 1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
+
+const LinkStyles = css`
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  &:hover{
+    color: #F0B726;
+  }
+`;
+
+const LinkContainerStyles = css`
+  display:flex;
+  flex-direction: column;
+`
 
 export const FooterContainer = styled.div`
  display: flex;
@@ -18,7 +38,7 @@ export const RoyalCalmInfoContainer = styled.div`
   padding: 1rem;
   display:flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 `
 
@@ -36,36 +56,45 @@ export const FooterLogo = styled(Logo)`
   height: 30%;
 `
 
+export const DeveloperInfoContainer = styled.div`
+  ${FooterInfoContainerStyles}
+  
+`
+
+export const DeveloperTitle = styled.div`
+  font-weight:bold;
+  padding-bottom: 2px;
+  border-bottom: 2px solid white;
+`
+
+export const DeveloperLinkContainer = styled.div`
+  ${LinkContainerStyles}
+`
+
+export const DeveloperLink = styled.a`
+  ${LinkStyles}
+`
+
+
 export const ContactInfoContainer = styled.div`
-  padding: 1rem;
+  ${FooterInfoContainerStyles};
   padding-right: 4rem;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+
 `
 export const ContactTitle = styled.div`
   font-weight:bold;
+  padding-bottom: 2px;
+  border-bottom: 2px solid white;
 `
 
 export const ContactSecondRow = styled.div`
   display: flex;
 `
 
-export const ContactSecondRowSpacing = styled.div`
-  width: 60%;
-`
-
 export const ContactLinkContainer = styled.div`
-  display:flex;
-  flex-direction: column;
+  ${LinkContainerStyles}
 `
-
 
 export const ContactLink = styled.a`
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  &:hover{
-    color: #F0B726;
-  }
+  ${LinkStyles}
 `
