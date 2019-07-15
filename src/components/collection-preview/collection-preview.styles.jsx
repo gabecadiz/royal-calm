@@ -20,9 +20,14 @@ export const CollectionTitle = styled.h1`
 `;
 
 export const CollectionLink = styled(Link)`
-  color: #F0B726;
+  color: rgb(67, 67, 67);
   height: 100%;
   margin: auto 0;
+
+  &:hover{
+    border-bottom: 1px solid #F0B726;
+    font-weight: bolder;
+  }
 `
 
 export const CollectionPreviewFilteredContainer = styled.div`

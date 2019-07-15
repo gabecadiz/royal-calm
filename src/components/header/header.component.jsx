@@ -12,6 +12,7 @@ import ShoppingCart from '../shopping-cart/shopping-cart.component'
 import {
   HeaderContainer,
   LogoContainer,
+  LogoTitle,
   OptionsContainer,
   OptionLink
 } from './header.styles'
@@ -23,13 +24,11 @@ const Header = ({ currentUser, hidden }) => {
     <HeaderContainer>
       <LogoContainer to='/'>
         <Logo className='logo' />
+        <LogoTitle><span>Royal Calm Clothing Ltd.</span></LogoTitle>
       </LogoContainer>
       <OptionsContainer >
         <OptionLink to='/shop'>
           SHOP ALL
-        </OptionLink>
-        <OptionLink to='/shop'>
-          CONTACT
         </OptionLink>
         {
           currentUser

@@ -1,20 +1,22 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-import HomePage from './pages/homepage/homepage.component'
-import ShopPage from './pages/shop/shop.component'
-import CheckoutPage from './pages/checkout/checkout.component'
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
-import Header from './components/header/header.component'
-import ScrollToTop from './components/scroll-to-top/scroll-to-top.component'
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import ContactPage from './pages/contact/contact.component';
+import Header from './components/header/header.component';
+import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
+import Footer from './components/footer/footer.component';
 
 
-import { auth, createUserProfileDocument } from './firebase/firebase.utils'
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.action'
+import { setCurrentUser } from './redux/user/user.action';
 
 import { createStructuredSelector } from 'reselect';
-import { selectCurrentUser } from './redux/user/user.selectors'
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 
 import './App.css';
@@ -66,8 +68,10 @@ class App extends React.Component {
                 (<Redirect to="/" />) :
                 (<SignInAndSignUpPage />)
             } />
+            <Route exact path='/contact' component={ContactPage} />
           </ScrollToTop>
         </Switch>
+        <Footer />
       </div>
     );
   }

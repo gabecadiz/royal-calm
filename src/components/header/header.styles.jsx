@@ -15,18 +15,25 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
+  display: flex;
+  align-content: center;
   height: 75px;
   width: 100%;
   padding: 20px 25px;
-  cursor: default;
+  cursor: pointer;
   .logo{
-    cursor: pointer;
-
     &:hover{
       transform: scale(1.2);
       transition: 1000ms;
     }
 `;
+
+export const LogoTitle = styled.div`
+  color: white;
+  font-size: 1.5rem;
+  font-weight:bold;
+  padding: 10px 15px;
+`
 
 export const OptionsContainer = styled.div`
   width: 50%;
