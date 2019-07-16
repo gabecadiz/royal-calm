@@ -22,14 +22,13 @@ class ShopPage extends React.Component {
   componentDidMount() {
     const { updateCollections } = this.props;
     const collectionRef = firestore.collection('collections');
-    //whenever collection ref or whenever code runs for first time, collection ref will send us the snapshot representing the code of our collections objects array at the time this code renders
-    this.unSubscribeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
+
+    collectionRef.get().then(snapshot => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
       updateCollections(collectionsMap);
       this.setState({ loading: false });
     })
-  }
-
+  };
   render() {
     const { loading } = this.state;
     const { match } = this.props;
