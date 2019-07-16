@@ -28,6 +28,7 @@ export const FooterContainer = styled.div`
  height: 25vh;
  width: 100vw;
  color: #fff;
+ margin-top: 2rem;
  background-color:rgb(67, 67, 67);
  -webkit-box-shadow: -1px -4px 10px -4px rgba(94,94,94,1);
  -moz-box-shadow: -1px -4px 10px -4px rgba(94,94,94,1);
