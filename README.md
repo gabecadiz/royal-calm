@@ -3,16 +3,16 @@
 Royal Calm is an e-Commerce project that uses React for front-end and Google's Firebase as a back-end for secure user authorization and data storage. The project will utilize Stripe API as a secure payment system. Royal Calm utilizes many modern React libraries and focuses on organized, efficient and scalable code. 
 
 ## Home Page
-![Royal Calm Home Page](/assets/GitHub/royal-calm-homepage.png)
+![Royal Calm Home Page](/src/assets/GitHub/royal-calm-homepage.png)
 
 ## Sign In / Sign Up Capabilities
-![Royal Calm Sign In / Sign Up Page](/assets/GitHub/royal-calm-google-sign-in.gif)
+![Royal Calm Sign In / Sign Up Page](src/assets/GitHub/royal-calm-google-sign-in.gif)
 
 ## Add to Cart
-![Royal Calm Add To Cart Example](/assets/GitHub/royal-calm-add-to-cart.gif)
+![Royal Calm Add To Cart Example](src/assets/GitHub/royal-calm-add-to-cart.gif)
 
 ## Checkout Page
-![Royal Calm Add To Cart Example](/assets/GitHub/royal-calm-checkout.gif)
+![Royal Calm Add To Cart Example](src/assets/GitHub/royal-calm-checkout.gif)
 
 ### Setup
 
