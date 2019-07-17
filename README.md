@@ -18,7 +18,7 @@ Royal Calm is an e-Commerce project that uses React for front-end and Google's F
 
 Royal Calm is deployed via Heroku and can be found [here](https://royal-calm.herokuapp.com/)
 
-- First page load may be slow as heroku server must wake up if there are no site visitors recently!
+- First page load may be slow as heroku server must wake up if there are no recent page visitors!
 
 ### Dependencies
 
