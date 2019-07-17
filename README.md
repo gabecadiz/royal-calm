@@ -17,24 +17,24 @@ Royal Calm is an e-Commerce project that uses React for front-end and Google's F
 ### Setup
 
 Royal Calm is deployed via Heroku and can be found [here](https://royal-calm.herokuapp.com/)
-*First page load may be slow as heroku server must wake up if there are no site visitors recently!
+
+- First page load may be slow as heroku server must wake up if there are no site visitors recently!
 
 ### Dependencies
 
--Firebase
--React
--React-redux
--React-router-dom
--Redux-persist
--Redux-thunk
--Reselect
--Styled-components
+- Firebase
+- React-redux
+- React-router-dom
+- Redux-persist
+- Redux-thunk
+- Reselect
+- Styled-components
 
 
 ### Wishlist / Project Todo List
--Cart Notifications
--Mobile friendly/ Progressive Web App
--Implement GraphQL
--Filtering/search methods
--Animated landing page
+- Cart Notifications
+- Mobile friendly/ Progressive Web App
+- Implement GraphQL
+- Filtering/search methods
+- Animated landing page
 
