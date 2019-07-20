@@ -13,7 +13,7 @@ import Footer from './components/footer/footer.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.action';
+import { setCurrentUser } from './redux/user/user.actions';
 
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -27,25 +27,25 @@ class App extends React.Component {
   componentDidMount() {
     const { setCurrentUser } = this.props
 
-    //open subscription - default persistance of user sessions
-    //connection is always open, must close when unmounts
-    //async, createUserProfileDocument gets run whenever we get an auth object for firestore
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+    // //open subscription - default persistance of user sessions
+    // //connection is always open, must close when unmounts
+    // //async, createUserProfileDocument gets run whenever we get an auth object for firestore
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    //   if (userAuth) {
+    //     const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapShot => {
-          //set state with user id and any data representing all properties of snapshot
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          });
-        });
-      } else {
-        setCurrentUser(userAuth);
-      }
+    //     userRef.onSnapshot(snapShot => {
+    //       //set state with user id and any data representing all properties of snapshot
+    //       setCurrentUser({
+    //         id: snapShot.id,
+    //         ...snapShot.data()
+    //       });
+    //     });
+    //   } else {
+    //     setCurrentUser(userAuth);
+    //   }
 
-    })
+    // })
   }
   //closes subscription whenever component unmounts
   componentWillUnmount() {
