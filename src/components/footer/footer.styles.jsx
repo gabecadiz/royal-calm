@@ -5,7 +5,7 @@ const FooterInfoContainerStyles = css`
   padding: 1rem;
   display:flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 `
 
 const LinkStyles = css`
@@ -15,11 +15,13 @@ const LinkStyles = css`
   &:hover{
     color: #F0B726;
   }
+  font-size: 0.9em;
 `;
 
 const LinkContainerStyles = css`
   display:flex;
   flex-direction: column;
+  padding-top: 0.5em;
 `
 
 export const FooterContainer = styled.div`
@@ -40,7 +42,11 @@ export const RoyalCalmInfoContainer = styled.div`
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+
+ span {
+   margin: 0 auto;
+ }
+
 `
 
 export const ProjectWarning = styled.span`
@@ -55,16 +61,20 @@ export const CreatorInfo = styled.span`
 
 export const FooterLogo = styled(Logo)`
   height: 30%;
+  margin: 0 auto;
 `
 
 export const DeveloperInfoContainer = styled.div`
   ${FooterInfoContainerStyles}
-  
 `
 
-export const DeveloperTitle = styled.div`
+export const DeveloperTitleContainer = styled.div`
   font-weight:bold;
   padding-bottom: 2px;
+`
+
+export const DeveloperTitle = styled.span`
+  padding: 4px;
   border-bottom: 2px solid white;
 `
 
@@ -79,8 +89,6 @@ export const DeveloperLink = styled.a`
 
 export const ContactInfoContainer = styled.div`
   ${FooterInfoContainerStyles};
-  padding-right: 4rem;
-
 `
 export const ContactTitle = styled.div`
   font-weight:bold;

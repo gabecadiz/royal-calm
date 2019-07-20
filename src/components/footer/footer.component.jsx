@@ -7,6 +7,7 @@ import {
   CreatorInfo,
   ProjectWarning,
   DeveloperInfoContainer,
+  DeveloperTitleContainer,
   DeveloperTitle,
   DeveloperLink,
   DeveloperLinkContainer,
@@ -32,7 +33,11 @@ const Footer = () => {
         </ProjectWarning>
       </RoyalCalmInfoContainer>
       <DeveloperInfoContainer>
-        <DeveloperTitle>Website Technology</DeveloperTitle>
+        <DeveloperTitleContainer>
+          <DeveloperTitle>
+            Website Technology
+          </DeveloperTitle>
+        </DeveloperTitleContainer>
         <DeveloperLinkContainer>
           <DeveloperLink href='https://reactjs.org/' target="_blank">React.js</DeveloperLink>
           <DeveloperLink href='https://firebase.google.com/' target='_blank'>Google Firebase authentication</DeveloperLink>
