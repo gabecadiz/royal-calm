@@ -42,6 +42,7 @@ export const LogoContainer = styled(Link)`
         transform: scale(1.2);
         transition: 1000ms;
       }
+    }
   }
 
 `;
