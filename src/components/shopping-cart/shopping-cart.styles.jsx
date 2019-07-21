@@ -43,7 +43,7 @@ export const ShoppingCartContainer = styled.div`
 `;
 
 export const CartItemsContainer = styled.div`
-  height: calc(100vh - 85px); 
+  height: auto; 
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -65,6 +65,5 @@ export const TotalPriceContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   font-weight:bold;
-  }
-
+  
 `;
