@@ -23,7 +23,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
     <HeaderContainer>
       <LogoContainer to='/'>
         <Logo className='logo' />
-        <LogoTitle><span>Royal Calm Clothing Ltd.</span></LogoTitle>
+        <LogoTitle>Royal Calm Clothing Ltd.</LogoTitle>
       </LogoContainer>
       <OptionsContainer >
         <OptionLink to='/shop'>

@@ -5,6 +5,10 @@ const containerStyles = css`
   width: 23%;
   justify-content: center;
   align-self: center;
+
+  @media screen and (max-width: 800px){
+    width: 22%;
+   } 
 `
 
 export const CheckoutItemContainer = styled.div`
@@ -17,6 +21,10 @@ export const CheckoutItemContainer = styled.div`
   padding: 1rem;
   align-items: center;
   font-size: 1.5rem;
+
+  @media screen and (max-width: 800px){
+    font-size: 16px;
+   } 
 `;
 
 export const CheckoutItemImageContainer = styled.div`

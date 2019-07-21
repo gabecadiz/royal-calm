@@ -36,6 +36,10 @@ export const ShoppingCartContainer = styled.div`
   button {
     margin-top: auto;
     }
+
+  @media screen and (max-width: 800px){
+    top: 70px;
+  }  
 `;
 
 export const CartItemsContainer = styled.div`

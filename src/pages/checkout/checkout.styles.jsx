@@ -7,6 +7,11 @@ export const CheckoutPageContainer = styled.div`
   flex-direction:column;
   justify-content: space-between;
   border: 1px solid black;
+
+  @media screen and (max-width: 800px){
+    width: 95%;
+   } 
+  
 `;
 
 export const CheckoutHeaderContainer = styled.div`
@@ -19,16 +24,32 @@ export const CheckoutHeaderContainer = styled.div`
   .checkout-cart-item{
     height: 10vh;
   }
+
+  @media screen and (max-width: 800px){
+    padding: 0px;
+    justify-content: space-evenly;
+   } 
+
 `;
 
 export const HeaderBlock = styled.div`
   font-size: 1.2em;
   width: 23%;
 
+  @media screen and (max-width: 800px){
+    width: 20%;
+    font-size: 12px;
+
+    &:last-child{
+      width: 20%;
+    }
+   } 
+
   &:last-child{
     width: 8%;
     justify-self: end
   }
+
 `;
 
 export const HeaderBlockText = styled.span`

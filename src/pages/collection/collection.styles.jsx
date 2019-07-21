@@ -16,9 +16,16 @@ export const CollectionItemsContainer = styled.div`
   grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  padding: 0px 10px 20px 10px;
 
   & > div {
     margin-bottom: 30px;
   }
+
+  @media screen and (max-width: 800px){
+    grid-template-columns: 1fr 1fr;
+
+    & > div {
+      margin-bottom: 10px;
+    }
+   } 
 `;
