@@ -43,7 +43,7 @@ export const ShoppingCartContainer = styled.div`
 `;
 
 export const CartItemsContainer = styled.div`
-  height: 80%;
+  height: calc(100vh - 85px); 
   display: flex;
   flex-direction: column;
   overflow: scroll;
