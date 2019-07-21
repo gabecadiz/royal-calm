@@ -39,6 +39,7 @@ export const ShoppingCartContainer = styled.div`
 
   @media screen and (max-width: 800px){
     top: 70px;
+    height: auto;
   }  
 `;
 
