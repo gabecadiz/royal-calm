@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
 
 import { signUpStart } from '../../redux/user/user.actions'
 
 import {
   SignUpContainer,
-  SignUpTitle
+  SignUpTitle,
+  SignUpCustomButton
 } from './sign-up.styles'
 
 class SignUp extends React.Component {
@@ -83,7 +83,7 @@ class SignUp extends React.Component {
             label='Confirm Password'
             required
           />
-          <CustomButton type='submit'>SIGN UP</CustomButton>
+          <SignUpCustomButton type='submit'>SIGN UP</SignUpCustomButton>
         </form>
       </SignUpContainer>
     )

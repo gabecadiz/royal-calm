@@ -39,6 +39,9 @@ export const CollectionLink = styled(Link)`
   height: 100%;
   margin: auto 0;
 
+  @media screen and (max-width: 800px){
+    font-size: 14px;
+   } 
 
   &:hover{
     border-bottom: 1px solid #F0B726;

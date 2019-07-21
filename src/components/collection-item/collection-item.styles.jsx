@@ -52,7 +52,7 @@ export const BackgroundImage = styled.div`
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
   
   @media screen and (max-width: 800px){
-    width: 90%;
+    width: 100%;
     height: 80%;
   }
   
