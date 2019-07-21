@@ -12,7 +12,11 @@ Royal Calm is an e-Commerce project that uses React for front-end and Google's F
 ![Royal Calm Add To Cart Example](src/assets/GitHub/royal-calm-add-to-cart.gif)
 
 ## Checkout Page
-![Royal Calm Add To Cart Example](src/assets/GitHub/royal-calm-checkout.gif)
+![Royal Calm Checkout Page Example](src/assets/GitHub/royal-calm-checkout.gif)
+
+## Mobile Demo
+![Royal Calm Mobile Example](src/assets/GitHub/royal-calm-mobile-demo.gif)
+
 
 ### Setup
 
@@ -26,14 +30,14 @@ Royal Calm is deployed via Heroku and can be found [here](https://royal-calm.her
 - React-redux
 - React-router-dom
 - Redux-persist
-- Redux-thunk
+- Redux-saga
 - Reselect
 - Styled-components
 
 
 ### Wishlist / Project Todo List
 - Cart Notifications
-- Mobile friendly/ Progressive Web App
+- Progressive Web App
 - Implement GraphQL
 - Filtering/search methods
 - Animated landing page
