@@ -16,6 +16,11 @@ const LinkStyles = css`
   text-decoration: none;
   color: white;
   cursor: pointer;
+
+  @media screen and (max-width: 800px){
+    margin: 0 auto;
+   } 
+
   &:hover{
     color: #F0B726;
   }
@@ -45,7 +50,7 @@ export const FooterContainer = styled.div`
   height: auto;
   flex-direction: column;
  } 
-`;
+`
 
 export const RoyalCalmInfoContainer = styled.div`
   padding: 1rem;
