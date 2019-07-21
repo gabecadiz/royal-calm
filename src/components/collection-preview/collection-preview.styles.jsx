@@ -17,9 +17,9 @@ export const CollectionPreviewContainer = styled.div`
 
 export const CollectionTitleContainer = styled.div`
   display: flex;
-  align-items: stretch;
-  justify-content: space-evenly;
-  width: 80vw;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
   padding: 15px 20px;
 
   @media screen and (max-width: 800px){
