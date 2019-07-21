@@ -12,8 +12,9 @@ export const CollectionItemContainer = styled.div`
   border-radius: 2px;
 
    @media screen and (max-width: 800px){
-    width: 40vw;
+    width: 45vw;
     height: 400px;
+    
 
     &:hover {
       .image {

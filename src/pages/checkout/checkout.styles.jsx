@@ -37,12 +37,9 @@ export const HeaderBlock = styled.div`
   width: 23%;
 
   @media screen and (max-width: 800px){
-    width: 20%;
+    width: auto;
     font-size: 12px;
 
-    &:last-child{
-      width: 20%;
-    }
    } 
 
   &:last-child{
