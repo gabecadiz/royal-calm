@@ -10,6 +10,7 @@ import Header from './components/header/header.component';
 import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
 import Footer from './components/footer/footer.component';
 
+import { GlobalStyle } from './global.styles';
 
 import { connect } from 'react-redux';
 
@@ -17,8 +18,6 @@ import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-
-import './App.css';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -37,6 +36,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
           <ScrollToTop>

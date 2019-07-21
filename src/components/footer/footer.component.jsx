@@ -13,12 +13,14 @@ import {
   DeveloperLinkContainer,
   ContactInfoContainer,
   ContactLinkContainer,
+  ContactTitleContainer,
   ContactTitle,
   ContactLink,
 } from './footer.styles'
 const Footer = () => {
   return (
     <FooterContainer>
+
       <RoyalCalmInfoContainer>
         <FooterLogo />
         <span>Thank you for visiting</span>
@@ -32,6 +34,7 @@ const Footer = () => {
           Project currently in progress and subject to change
         </ProjectWarning>
       </RoyalCalmInfoContainer>
+
       <DeveloperInfoContainer>
         <DeveloperTitleContainer>
           <DeveloperTitle>
@@ -46,8 +49,11 @@ const Footer = () => {
         </DeveloperLinkContainer>
 
       </DeveloperInfoContainer>
+
       <ContactInfoContainer>
-        <ContactTitle>Customer Support</ContactTitle>
+        <ContactTitleContainer>
+          <ContactTitle>Customer Support</ContactTitle>
+        </ContactTitleContainer>
         <ContactLinkContainer>
           <ContactLink href='https://www.linkedin.com/in/gabriel-cadiz/' target="_blank">LinkedIn</ContactLink>
           <ContactLink href='https://github.com/gabecadiz' target="_blank">GitHub</ContactLink>
@@ -55,6 +61,7 @@ const Footer = () => {
           <ContactLink href="mailto: gabecadiz@hotmail.com" >Email Me</ContactLink>
         </ContactLinkContainer>
       </ContactInfoContainer>
+
     </FooterContainer>
   )
 }

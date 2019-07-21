@@ -6,6 +6,10 @@ const FooterInfoContainerStyles = css`
   display:flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 800px){
+    margin: 0 auto;
+    width: 80%;
+   } 
 `
 
 const LinkStyles = css`
@@ -32,9 +36,15 @@ export const FooterContainer = styled.div`
  color: #fff;
  margin-top: 2rem;
  background-color:rgb(67, 67, 67);
+ box-sizing: border-box
  -webkit-box-shadow: -1px -4px 10px -4px rgba(94,94,94,1);
  -moz-box-shadow: -1px -4px 10px -4px rgba(94,94,94,1);
  box-shadow: -1px -4px 10px -4px rgba(94,94,94,1);
+
+ @media screen and (max-width: 800px){
+  height: auto;
+  flex-direction: column;
+ } 
 `;
 
 export const RoyalCalmInfoContainer = styled.div`
@@ -47,6 +57,9 @@ export const RoyalCalmInfoContainer = styled.div`
    margin: 0 auto;
  }
 
+ @media screen and (max-width: 800px){
+  padding: 8px 4px 4px 4px;
+ } 
 `
 
 export const ProjectWarning = styled.span`
@@ -62,6 +75,11 @@ export const CreatorInfo = styled.span`
 export const FooterLogo = styled(Logo)`
   height: 30%;
   margin: 0 auto;
+  
+  @media screen and (max-width: 800px){
+    padding: 5px;
+   } 
+  
 `
 
 export const DeveloperInfoContainer = styled.div`
@@ -71,6 +89,7 @@ export const DeveloperInfoContainer = styled.div`
 export const DeveloperTitleContainer = styled.div`
   font-weight:bold;
   padding-bottom: 2px;
+  margin: 0 auto;
 `
 
 export const DeveloperTitle = styled.span`
@@ -90,9 +109,15 @@ export const DeveloperLink = styled.a`
 export const ContactInfoContainer = styled.div`
   ${FooterInfoContainerStyles};
 `
-export const ContactTitle = styled.div`
+
+export const ContactTitleContainer = styled.div`
   font-weight:bold;
   padding-bottom: 2px;
+  margin: 0 auto;
+`
+
+export const ContactTitle = styled.span`
+  padding: 4px;
   border-bottom: 2px solid white;
 `
 

@@ -13,6 +13,11 @@ export const MenuItemContainer = styled.div`
   -webkit-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
   -moz-box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
   box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.32);
+
+  @media screen and (max-width: 800px){
+    height: 200px;
+   } 
+
 	&:hover {
 		cursor: pointer;
 		& .background-image {
@@ -38,6 +43,8 @@ export const MenuItemContainer = styled.div`
   &:last-child {
     margin-left: 7.5px;
   }
+
+
 `;
 
 export const BackgroundImageContainer = styled.div`
@@ -63,6 +70,11 @@ export const ContentContainer = styled.div`
   background-color: rgb(67, 67, 67);
   opacity: 0.95;
   position: absolute;
+
+  @media screen and (max-width: 800px){
+    padding: 0 5px;
+    min-width: 80px;
+   } 
 `;
 
 export const ContentTitle = styled.h1`
@@ -71,10 +83,18 @@ export const ContentTitle = styled.h1`
   margin-bottom: 6px;
   font-size: 28px;
   color: #f7f7f7;
+
+  @media screen and (max-width: 800px){
+    font-size: 20px;
+   } 
 `;
 
 export const ContentSubTitle = styled.span`
   font-weight: lighter;
   font-size: 20px; 
   color: #f6f6f6;
+
+  @media screen and (max-width: 800px){
+    font-size: 16px;
+   } 
 `;
