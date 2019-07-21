@@ -14,6 +14,8 @@ const config = {
   appId: "1:483444585334:web:0c5e2984f5428174"
 };
 
+firebase.initializeApp(config);
+
 //function that takes user auth object then store in database;
 //async api request
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -75,17 +77,27 @@ export const convertCollectionsSnapshotToMap = (collections) => {
   }, {})
 }
 
-firebase.initializeApp(config);
+//mimicking fetching users from a database as using firebase is slightly different
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject)
+  })
+}
+
+
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 //setup google authentication utlity
 
-const provider = new firebase.auth.GoogleAuthProvider();
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
 //trigger google pop up whenever we use google auth provider for auth and signin
-provider.setCustomParameters({ prompt: 'select_account' })
+googleProvider.setCustomParameters({ prompt: 'select_account' })
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;

@@ -11,12 +11,11 @@ import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
 import Footer from './components/footer/footer.component';
 
 
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.action';
 
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selectors';
+import { checkUserSession } from './redux/user/user.actions';
 
 
 import './App.css';
@@ -25,27 +24,8 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props
-
-    //open subscription - default persistance of user sessions
-    //connection is always open, must close when unmounts
-    //async, createUserProfileDocument gets run whenever we get an auth object for firestore
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
-
-        userRef.onSnapshot(snapShot => {
-          //set state with user id and any data representing all properties of snapshot
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          });
-        });
-      } else {
-        setCurrentUser(userAuth);
-      }
-
-    })
+    const { checkUserSession } = this.props;
+    checkUserSession();
   }
   //closes subscription whenever component unmounts
   componentWillUnmount() {
@@ -82,6 +62,7 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  checkUserSession: () => dispatch(checkUserSession())
 })
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
